@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HelloCodi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style type="text/css">
+            /* Your CSS goes here */
+               #textLine {
+                /* Centre the button at the bottom of the screen */
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                margin-bottom: 10px;
+                color:cyan;
+            }
+            #textLine {
+                 font-size: 2em;
+                width: 10em;
+                height: 2em;
+            }
+          
+            button {
+                margin-left: auto;
+                margin-right: auto;
+                
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <audio id="myAudio">
+            <source src="ringtone_20%20(1).mp3" type="audio/mpeg">
+        </audio>
+            <div>
+        <button form="image" onclick="playAudio" >
+              <img src="jeff.jpg" width="500" height="300" >
+            
+        </button>
+        <br />    
+         <h1 id="textLine">Touch The Meme</h1>
+        
+        <script>
+            var x=document.getElementById("myAudio");
+            function playAudio(){
+    
+                x.play();
+            }
+        </script>
+    </body>
+</html>
