@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <style type="text/css">
+
+        </style>
+
+    </head>
+    <body>
+        <input type="number" id="x" >
+        <select id="operations">
+            <option value="+" selected="selected">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="sqrt">√</option>
+            <option value="power">^</option>
+         <input type="number" id="y">
+            <button onclick="calc()"> Click for answer</button>
+            <p id="res"></p>
+
+        </select>
+        <script>
+            function calc() {
+    var x = parseFloat(document.getElementById("x").value);
+    var y = parseFloat(document.getElementById("y").value);
+    var n = document.getElementById("operations");
+    var m = n.options[n.selectedIndex].value;
+
+                   if (m == "+")
+                    {
+                    document.getElementById("res").innerHTML= x+y;
+            }
+                   if (m == "-")
+                    {
+                    document.getElementById("res").innerHTML= x-y;
+            }
+                   if (m == "*")
+                    {
+                    document.getElementById("res").innerHTML= x*y;
+            }
+                   if (m == "/")
+                    {
+                    document.getElementById("res").innerHTML= x/y;
+            }
+                   if (m == "sqrt")
+                       {
+                    document.getElementById("res").innerHTML= Math.sqrt(x);
+            }
+                   if (m == "power")
+                       {
+                    document.getElementById("res").innerHTML= Math.pow(x,y)
+            }
+
+                            }
+
+
+        </script>
+    </body>
+</html>
