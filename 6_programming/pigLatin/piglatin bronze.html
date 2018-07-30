@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Pig Latin Converter</title>
+	</head>
+	<body>
+		<input id="x" placeholder="Input English Word Here">
+		<button id="Convert" onclick="convert()">Convert</button>
+		<p id="PigLatinWord"></p>
+        <script>
+        function convert() {
+    var x = document.getElementById("x").value;
+    var lower = x.toLowerCase().split("");
+    var word = document.getElementById("PigLatinWord");
+    var FirstLetter = lower[0].toLowerCase();
+    lower[0] = lower[0].toLowerCase();
+    var Output;
+    var Goutput;
+    if(FirstLetter != "a" && FirstLetter != "e" && FirstLetter != "i" && FirstLetter != "o" && FirstLetter != "u") {
+        lower.splice(0, 1);
+        lower.push(FirstLetter);
+        Output = lower.join("") + "ay";
+        Goutput = Output.toLowerCase();
+        word.innerHTML = Goutput;
+    } else {
+        Output = lower.join("") + "ay"
+        Goutput = Output.toLowerCase();
+        word.innerHTML = Output;
+    }
+}
+        </script>
+	</body>
+</html>
